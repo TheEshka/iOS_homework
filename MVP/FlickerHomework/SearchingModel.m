@@ -79,6 +79,7 @@
     self.currentPage = 1;
     
     [self.allPhotos removeAllObjects];
+    [self.allPhotosParams removeAllObjects];
     [self.networkService findFlickrPhotoWithSearchString:searchedText forPage:self.currentPage];
 }
 
