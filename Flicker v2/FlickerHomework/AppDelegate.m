@@ -91,6 +91,7 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 withCompletionHandler:(void(^)(void))completionHandler
 {
     UNNotificationContent *content = response.notification.request.content;
+    [UIApplication sharedApplication].applicationIconBadgeNumber -= 1;
     if (content.userInfo[@"searchString"])
     {
         NSString *searchText = content.userInfo[@"searchString"];
